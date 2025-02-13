@@ -232,7 +232,20 @@
     <script type="text/javascript" src="js/jquery.validate.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script>
+        function initMap() {
+            var antofagasta = {lat: -23.6500, lng: -70.4000};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: antofagasta
+            });
+            var marker = new google.maps.Marker({
+                position: antofagasta,
+                map: map
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
 <!-- SCRIPTS ENDS -->
 </body>
 
